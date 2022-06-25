@@ -1,0 +1,4 @@
+com\model\Student.class
+com\dao\StudentImpl.class
+com\controller\Register.class
+com\configuration\StudentConfig.class

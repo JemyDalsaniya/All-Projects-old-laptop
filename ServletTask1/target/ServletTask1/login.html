@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Login</title>
+</head>
+
+<body>
+	 <!--  <script type="text/javascript">
+   function noBack()
+     {
+    	console.log("function called");
+         window.history.forward()
+     }
+    noBack();
+    window.onload = noBack;
+    window.onpageshow = function(evt) { if (evt.persisted) noBack() }
+    window.onunload = function() { void (0) }
+	</script> -->
+	<form action="User_login" method="post">
+		<table>
+
+			<tr>
+				<td>UserName</td>
+				<td><input type="text" name="username" /></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="Login" /><br /> <br /><a href="register.html">New User</a>
+	</form>
+</body>
+</html>

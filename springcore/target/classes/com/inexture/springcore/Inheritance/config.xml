@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- create bean in normal way -->
+	<bean id="student"
+		class="com.inexture.springcore.Inheritance.Student">
+		<property name="sub1" value="subject 1" />
+		<property name="sub2" value="subject 22" />
+	</bean>
+	<bean id="teacher"
+		class="com.inexture.springcore.Inheritance.Teacher" parent="student">
+		<property name="sub2" value="subject 3" />
+		<property name="sub3" value="subject 4" />
+		<property name="sub4" value="subject 5" />
+	</bean>
+</beans>

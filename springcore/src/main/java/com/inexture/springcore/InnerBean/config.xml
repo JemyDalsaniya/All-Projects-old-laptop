@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- create bean inside bean in normal way -->
+	<!-- <bean class="com.inexture.springcore.Student" name="student1"> <property 
+		name="studentId" value="11" /> <property name="studentName" value="Jemy" 
+		/> <property name="address" ref="address" /> </bean> <bean id="address" class="com.inexture.springcore.Address"> 
+		<property name="addId" value="101" /> <property name="city" value="Delhi" 
+		/> </bean> -->
+
+	<!-- create bean inside bean using InnerBean concept normal way -->
+	<bean class="com.inexture.springcore.InnerBean.Student"
+		id="student">
+		<property name="studentId" value="11" />
+		<property name="studentName" value="Jemy" />
+		<property name="address">
+			<bean class="com.inexture.springcore.InnerBean.Address">
+				<property name="addId" value="101" />
+				<property name="city" value="Delhi" />
+			</bean>
+		</property>
+	</bean>
+	<!--use of alias -->
+	<alias name="student" alias="student11" />
+</beans>
